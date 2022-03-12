@@ -181,13 +181,13 @@ public class DetallePedidoFragment extends Fragment implements View.OnClickListe
                 for (ModeloVistaProducto mvp: datos){
                     String sql = "";
                     if (mvp.isEsomentario()){
-                        sql = "INSERT INTO celular values (" +null + ", " + mesa + ", 0, '" +
+                        sql = "INSERT INTO celular values (" +null + ", " + mesa + ", '0', '" +
                                 mvp.getComentario() + "', '" + mesero + "', 'a')";
                         System.out.println(sql);
                     }
                     else {
-                        sql = "INSERT INTO celular values (" +null + ", " + mesa + ", " + mvp.getProducto().getCodigo() +
-                                ", " + "''" +  ", '" + mesero + "', 'a')";
+                        sql = "INSERT INTO celular values (" +null + ", " + mesa + ", '" + mvp.getProducto().getCodigo() +
+                                "', " + "''" +  ", '" + mesero + "', 'a')";
                         System.out.println(sql);
                     }
                     st2.executeUpdate(sql);
