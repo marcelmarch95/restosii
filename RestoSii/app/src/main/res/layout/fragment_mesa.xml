@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="70dp"
+    tools:context=".ui.pedido.SelectorMesasFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/mesero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mesero"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/mesatv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mesa 8"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_musicas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="240dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/volverafamilia"
+                android:layout_width="170dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center"
+                android:text="VOLVER A FAMILIAS"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PEDIDO ACTUAL"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|center"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/comentario"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom|center"
+                    android:ems="10"
+                    android:gravity="bottom|center"
+                    android:hint="AGREGAR COMENTARIO"
+                    android:inputType="textPersonName"
+                    android:maxLength="30"
+                    android:textSize="12sp" />
+
+                <ImageButton
+                    android:id="@+id/enviarcomentario"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/send" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_musicas2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3" />
+
+                    <Button
+                        android:id="@+id/btnenviar"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:backgroundTint="#33691E"
+                        android:gravity="bottom|center"
+                        android:text="Enviar Pedido"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
